@@ -31,6 +31,7 @@
           ".cargo"
           
           ".local/share/fish"
+	  ".thunderbird"
         ];  
         files = [
           ".gitconfig"

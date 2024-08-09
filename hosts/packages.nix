@@ -9,6 +9,7 @@
   libnotify
   libinput
   libwacom
+  zlib
 
   eza
   fzf
@@ -17,6 +18,7 @@
   ripgrep
   fd
   htop
+  bat
 
   grim
   dunst
@@ -40,6 +42,7 @@
   discord
   firefox
   ungoogled-chromium
+  thunderbird
 
   neovim nano tmux
   emacs 
