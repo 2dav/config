@@ -1,7 +1,5 @@
 { inputs, outputs, config, pkgs, lib, ... }: {
 
-  time.timeZone = "Europe/Moscow";
-
   nix = {
     registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
     nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
@@ -54,7 +52,7 @@
   zramSwap.enable=true;
 
   networking = {
-    useDHCP = lib.mkDefault true;
+    useDHCP = true;
     networkmanager.enable = true;
     firewall.enable = true;
   };
@@ -124,12 +122,14 @@
       zood = {
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" "audio" ];
-	hashedPasswordFile = "/persist/home/zood/password_hash";
+        hashedPasswordFile = "/persist/home/zood/password_hash";
         home = "/home/zood";
         createHome = false; 
       };
     };
   };
+
+  time.timeZone = "Europe/Moscow";
 
   fonts = {
     fontDir.enable = true;
