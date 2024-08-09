@@ -9,11 +9,11 @@
 
       users.zood = {
         directories = [
-	      "org"
-	      "papers"
-	      "dev"
-
-	      ".ssh"
+          "org"
+          "papers"
+          "dev"
+          
+          ".ssh"
           ".config/hypr"
           ".config/yambar"
           ".config/fish"
@@ -31,11 +31,10 @@
           ".cargo"
           
           ".local/share/fish"
-          "pulse"
         ];  
-		files = [
-		  ".gitconfig"
-		];
+        files = [
+          ".gitconfig"
+        ];
       };
   };
 
