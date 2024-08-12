@@ -19,6 +19,7 @@
   fd
   htop
   bat
+  poppler
 
   grim
   dunst
