@@ -17,7 +17,7 @@
           modules = [
             ./hosts/default.nix
             ./hosts/tower.nix
-	    ./hosts/persist.nix
+            ./hosts/persist.nix
             impermanence.nixosModules.impermanence
           ];
         };
