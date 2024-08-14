@@ -31,6 +31,7 @@
           ".cargo"
           
           ".local/share/fish"
+          ".local/share/kicad"
 	  ".thunderbird"
         ];  
         files = [

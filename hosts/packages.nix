@@ -19,7 +19,7 @@
   fd
   htop
   bat
-  poppler
+  poppler_utils
 
   grim
   dunst
@@ -32,9 +32,10 @@
 
   valgrind
   ghidra
+  kicad
+
   clang
   clang-tools
-
   rustup
   zig
   nodejs_22 yarn
