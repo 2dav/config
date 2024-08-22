@@ -30,9 +30,10 @@
   fish
   alacritty kitty
 
+  kicad
+  qucs-s
   valgrind
   ghidra
-  kicad
 
   clang
   clang-tools
@@ -63,6 +64,7 @@
   wl-clipboard
   (callPackage ./pkgs/yambar-hyprland-wses-alpha.nix {})
   #yambar-hyprland-wses
+  lxqt.lxqt-policykit
 
   (import ./pkgs/backup-config.nix { inherit pkgs; })
 ]
