@@ -63,6 +63,10 @@
   };
 
   services = {
+	xray = {
+		enable = true;
+		settingsFile = "/etc/xray/config.json";
+	};
     pipewire = {
       enable = true;
       pulse.enable = true;
@@ -93,11 +97,15 @@
     };
   };
 
-  systemd.services.greetd.serviceConfig = {
-    Type = "idle";
-    TTYReset = true;
-    TTYVHangup = true;
-    TTYVTDisallocate = true;
+  systemd.services = {
+	greetd = {
+		serviceConfig = {
+          Type = "idle";
+          TTYReset = true;
+          TTYVHangup = true;
+          TTYVTDisallocate = true;
+		};
+	};
   };
 
   xdg = {
@@ -153,7 +161,7 @@
       PUBLICSHARE=/var/empty
       DOCUMENTS=tmp
       MUSIC=tmp
-      PICTURES=tmp
+      PICTURES=downloads
       VIDEOS=tmp
       DESKTOP=/var/empty
     '';

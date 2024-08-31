@@ -10,6 +10,7 @@
   libinput
   libwacom
   zlib
+  inotify-tools
 
   eza
   fzf
@@ -20,6 +21,9 @@
   htop
   bat
   poppler_utils
+  xray
+  lxqt.lxqt-policykit
+  awscli2
 
   grim
   dunst
@@ -29,6 +33,7 @@
   zsh oh-my-zsh
   fish
   alacritty kitty
+  slurp
 
   kicad
   qucs-s
@@ -64,7 +69,6 @@
   wl-clipboard
   (callPackage ./pkgs/yambar-hyprland-wses-alpha.nix {})
   #yambar-hyprland-wses
-  lxqt.lxqt-policykit
 
   (import ./pkgs/backup-config.nix { inherit pkgs; })
 ]

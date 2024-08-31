@@ -3,6 +3,7 @@
   environment.persistence."/persist" = {
       directories = [
         "/etc/nixos"
+		"/etc/xray"
         "/etc/NetworkManager/system-connections"
         "/var/lib/chrony"
       ];
@@ -32,7 +33,7 @@
           
           ".local/share/fish"
           ".local/share/kicad"
-	  ".thunderbird"
+          ".thunderbird"
         ];  
         files = [
           ".gitconfig"
