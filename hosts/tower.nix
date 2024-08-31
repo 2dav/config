@@ -10,7 +10,6 @@
       availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
       kernelModules = [ "zfs" ];
       postDeviceCommands = lib.mkAfter ''
-      	zpool import -l rpool
         zfs rollback -r rpool/root@blank
         zfs rollback -r rpool/home@blank
       '';
@@ -43,6 +42,7 @@
     zfs = {
       autoSnapshot.enable = true;
       autoScrub.enable = true;
+	  trim.enable = true;
     };
   };
 
