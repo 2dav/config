@@ -45,6 +45,7 @@
   rustup
   zig
   nodejs_22 yarn
+  pyright
 
   telegram-desktop
   discord
