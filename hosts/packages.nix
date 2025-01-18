@@ -11,6 +11,8 @@
   libwacom
   zlib
   inotify-tools
+  gparted
+  woeusb
 
   eza
   fzf
@@ -24,6 +26,7 @@
   xray
   lxqt.lxqt-policykit
   awscli2
+  linuxPackages_latest.perf
 
   grim
   dunst
@@ -35,10 +38,8 @@
   alacritty kitty
   slurp
 
-  kicad
   qucs-s
   valgrind
-  ghidra
 
   clang
   clang-tools
@@ -48,10 +49,11 @@
   pyright
 
   telegram-desktop
-  discord
   firefox
-  ungoogled-chromium
   thunderbird
+  obsidian
+  sublime
+  feh
 
   neovim nano tmux
   emacs 
