@@ -17,10 +17,9 @@ local plugins = {
 	},
 
 	-- fuzzy finder
-	["junegunn/fzf"] = { dir = "/usr/share/fzf" },
-	["junegunn/fzf.vim"] = {
-		after = "fzf",
-		config = function() require("plugins.configs.fzf") end,
+	["ibhagwan/fzf-lua"] = {
+		requires = { "nvim-tree/nvim-web-devicons" },
+		config = function() require("plugins.configs.fzf") end 
 	},
 
 	-- auto insert pairing parenthesis, works with nvim-cmp too
@@ -41,31 +40,11 @@ local plugins = {
 		after = "nvim-treesitter",
 		config = function() require("plugins.configs.themes.base16") end 
 	},
-	
-	-- tokyonight theme
-	--["folke/tokyonight.nvim"] = {
-	-- 	after = "nvim-treesitter",
-	--	config = function() require("plugins.configs.themes.tokyonight") end 
-	--},
-	-- kanagawa theme
-	-- ["rebelot/kanagawa.nvim"] = {
-	--  	after = "nvim-treesitter",
-	-- 	config = function() require("plugins.configs.themes.kanagawa") end 
-	-- },
-
-	-- gruvbox-material theme
-	--["sainnhe/gruvbox-material"] = {
-	-- 	after = "nvim-treesitter",
-	--	config = function() require("plugins.configs.themes.gruvbox_material") end 
-	--},
 
 	-- statusline
 	["nvim-lualine/lualine.nvim"] = {
 		requires = { {"arkav/lualine-lsp-progress"} },
 		after = "nvim-base16",
-		-- after = "tokyonight.nvim",
-		-- after = "kanagawa.nvim",
-		-- after = "gruvbox-material",
 		config = function() require ("plugins.configs.lualine") end,
 	},
 
@@ -130,11 +109,36 @@ local plugins = {
 	},
 
 	--																			[Syntactic langs]
+	-- Markdown
 	["iamcco/markdown-preview.nvim"] = {
-		run = "cd app && npm install", 
+		run = "cd app && npm install && git restore .", 
 		setup = function() vim.g.mkdp_filetypes = { "markdown" } end, 
 		ft = { "markdown" },
-	}
+		config = function() require("plugins.configs.markdown-preview") end,
+	},
+	["brianhuster/live-preview.nvim"] = {},
+	["windwp/nvim-ts-autotag"] = {
+		config = function () require("nvim-ts-autotag").setup({ 
+			opts = {
+				enable_close = true, -- Auto close tags
+    			enable_rename = true, -- Auto rename pairs of tags
+    			enable_close_on_slash = false -- Auto close on trailing </
+			},
+		}) end
+	},
+	["norcalli/nvim-colorizer.lua"] = {
+		config = function () require("colorizer").setup() end,
+	},
+	--																			[Tools]
+	-- Obsidian
+	["epwalsh/obsidian.nvim"] = {
+		after = "cmp-spell",
+		requires = {{ "nvim-lua/plenary.nvim" },
+					{ "hrsh7th/nvim-cmp" },
+					{ "ibhagwan/fzf-lua" },
+					{ "nvim-treesitter/nvim-treesitter" },},
+		config = function() require("plugins.configs.obsidian") end,
+	},
 }
 
 local fn = vim.fn

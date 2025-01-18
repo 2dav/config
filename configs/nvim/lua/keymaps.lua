@@ -33,13 +33,6 @@ keymap("n", "?", "?\\v", noremap)
 keymap("n", "/", "/\\v", noremap)
 keymap("c", "%s/", "%sm/", noremap)
 
--- <C-p> to fzf over files 
-keymap("", "<C-p>", ":Files<cr>", {})
--- <leader>; for fzf over buffers
-keymap("n", "<leader>;", ":Buffers<cr>", {})
--- <leader>s for Rg search
-keymap("n", "<leader>s", ":Rg<cr>", noremap)
-
 --																		[Navigation & Panes]
 -- hump to start/end of the line using the home row keys
 keymap("", "H", "^", {})

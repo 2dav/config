@@ -11,20 +11,21 @@ if not parser_config_ok then
 end
 
 
-pc.get_parser_configs().mql5 = {
-	install_info = {
-		url = "/home/zood/Documents/Projects/other/repo/tree-sitter-mql5",
-    	files = {"src/parser.c"},
-    	generate_requires_npm = false,
-    	requires_generate_from_grammar = true, -- if folder contains pre-generated src/parser.c
-	},
-	-- filetype = "mqh",
-}
+-- pc.get_parser_configs().mql5 = {
+-- 	install_info = {
+-- 		url = "/home/zood/Documents/Projects/other/repo/tree-sitter-mql5",
+--     	files = {"src/parser.c"},
+--     	generate_requires_npm = false,
+--     	requires_generate_from_grammar = true, -- if folder contains pre-generated src/parser.c
+-- 	},
+-- 	-- filetype = "mqh",
+-- }
 
 tsc.setup({
 	ensure_installed = { 
 		"lua", "toml", "c", "cpp", "python", "zig",
-		"markdown", "html", "css", "javascript", 
+		"html", "css", "javascript", 
+		"markdown", "markdown_inline", 
 		"fish", "bash", "yaml"
 	},
 	auto_install = true,

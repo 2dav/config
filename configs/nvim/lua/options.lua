@@ -71,11 +71,12 @@ local options = {
 	     - noinsert: do not insert text until a selection is made
 	     - noselect: do not select, force user to select one from the menu --]]
 	completeopt = {"menuone", "noselect", "noinsert"},
-	conceallevel = 0,					-- so that `` is visible in markdown files
+	conceallevel = 1,					-- so that `` is visible in markdown files
 	backspace = "indent,eol,start",		-- backspace over newlines
 	-- https://github.com/vim/vim/issues/1735#issuecomment-383353563
 	ttyfast = true,
 	lazyredraw = true,
+	termguicolors = true,
 	synmaxcol = 200,
 	-- spelling completions
 	spell = true,
