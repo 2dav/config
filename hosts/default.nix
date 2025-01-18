@@ -17,7 +17,11 @@
   };
 
   nixpkgs = {
-    config.allowUnfree = true;
+    config = {
+		allowUnfree = true;
+	    allowUnfreePredicate = (pkg: true);
+		cudaSupport = true;
+	};
     hostPlatform = lib.mkDefault "x86_64-linux";
     overlays = [(final: prev: {
       # workaround for rofi-wayland not picking up plugins from .override.plugins
@@ -154,6 +158,7 @@
   };
 
   environment = {
+	variables = {};
     systemPackages = (import ./packages.nix) pkgs;
     etc."xdg/user-dirs.defaults".text = ''
       DOWNLOAD=downloads
