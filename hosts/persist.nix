@@ -11,6 +11,7 @@
       users.zood = {
         directories = [
           "org"
+          "notes"
           "papers"
           "dev"
           
