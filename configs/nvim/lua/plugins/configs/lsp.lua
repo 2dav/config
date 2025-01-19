@@ -6,6 +6,23 @@ end
 
 lsp.pyright.setup {}
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+ 
+lsp.html.setup {
+	capabilities = capabilities,
+}
+lsp.cssls.setup {
+	capabilities = capabilities,
+}
+lsp.jsonls.setup {
+	capabilities = capabilities,
+}
+lsp.emmet_language_server.setup {
+	filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "pug", "typescriptreact" },
+    capabilities = capabilities,
+}
+
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
   callback = function(ev)
