@@ -39,7 +39,7 @@
   slurp
 
   qucs-s
-  valgrind
+  valgrind.dev
 
   clang
   clang-tools
@@ -47,6 +47,8 @@
   zig
   nodejs_22 yarn
   pyright
+  vscode-langservers-extracted
+  emmet-language-server
 
   telegram-desktop
   firefox
