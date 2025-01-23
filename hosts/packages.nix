@@ -52,6 +52,7 @@
 
   telegram-desktop
   firefox
+  ungoogled-chromium
   thunderbird
   obsidian
   sublime
